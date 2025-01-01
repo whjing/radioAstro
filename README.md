@@ -14,6 +14,6 @@ There will be some basic radio Astronomy tutorials, hopefully...
 
 ---
 To do list:
-- [ ]Find some better example.
-- [ ]Add the required environment. For now, I am using the python==3.8, but it seems everything is updated to 3.9 -w-
+- [ ] Find some better example.
+- [ ] Add the required environment. For now, I am using the python==3.8, but it seems everything is updated to 3.9 -w-
 
