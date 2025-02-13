@@ -49,18 +49,10 @@ df_merged["type_uncertain_green"] = df_merged["type_uncertain_green"].astype(int
 # ========== Step 4: 读取观测数据，匹配波段信息 ==========
 df_obs = pd.read_csv(file_obs, delimiter=";", skiprows=2)
 
-# 标记不同波段，如果 df_obs angular_resolution 为(missed)，则认为是false
-df_obs["Xray"] = df_obs["energy_domain"].eq("X") & ~df_obs["angular_resolution"].eq("(missed)")
-df_obs["gamma_TeV"] = df_obs["energy_domain"].eq("gamma_TeV") & ~df_obs["angular_resolution"].eq("(missed)")
-df_obs["gamma_GeV"] = df_obs["energy_domain"].eq("gamma_GeV") & ~df_obs["angular_resolution"].eq("(missed)")
-
-
-
-
-
 # 处理 source 列，标记 shell 和 pwn
 df_obs["shell"] = df_obs["source"].str.contains("shell", case=False, na=False)
 df_obs["pwn"] = df_obs["source"].str.contains("pwn", case=False, na=False)
+
 
 
 # **新步骤**：在 groupby 之前创建 `source_flag`
@@ -70,32 +62,35 @@ df_obs["source_flag"] = df_obs.apply(
                 "pwn" if row["pwn"] else "", axis=1
 )
 
-# **按 SNR_id 聚合数据**
-agg_obs = df_obs.groupby("SNR_id").agg({
-    "Xray": "any",
-    "gamma_TeV": "any",
-    "gamma_GeV": "any",
-    "source_flag": lambda x: " & ".join(filter(None, set(x)))  # 去重并合并 source_flag
-}).reset_index()
+# 标记不同波段，如果 df_obs angular_resolution 为(missed)，则认为是false
+df_obs["Xray"] = df_obs["energy_domain"].eq("X") & ~df_obs["angular_resolution"].eq("(missed)")
+df_obs["gamma_TeV"] = df_obs["energy_domain"].eq("gamma_TeV") & ~df_obs["angular_resolution"].eq("(missed)")
+df_obs["gamma_GeV"] = df_obs["energy_domain"].eq("gamma_GeV") & ~df_obs["angular_resolution"].eq("(missed)")
+
+# 如果Xray为true, 则将source_flag信息写入Xray列
+df_obs["Xray"] = df_obs.apply(lambda row: row["source_flag"] if row["Xray"] else "", axis=1)
+# 如果gamma_TeV为true, 则将source_flag信息写入gamma_TeV列
+df_obs["gamma_TeV"] = df_obs.apply(lambda row: row["source_flag"] if row["gamma_TeV"] else "", axis=1)
+# 如果gamma_GeV为true, 则将source_flag信息写入gamma_GeV列
+df_obs["gamma_GeV"] = df_obs.apply(lambda row: row["source_flag"] if row["gamma_GeV"] else "", axis=1)
+
+print(df_obs["Xray"])
 
 
-# **将 source_flag 信息合并到波段列**
-def modify_band_value(band_value, source_flag):
-    """ 根据 source_flag 修改波段信息 """
-    if band_value:
-        if "shell & pwn" in source_flag:
-            return "yes & shell & pwn"
-        elif "shell" in source_flag:
-            return "yes & shell"
-        elif "pwn" in source_flag:
-            return "yes & pwn"
-        else:
-            return "yes"
-    return ""
 
-# 遍历并修改各个波段列
-for band in ["Xray", "gamma_TeV", "gamma_GeV"]:
-    agg_obs[band] = agg_obs.apply(lambda row: modify_band_value(row[band], row["source_flag"]), axis=1)
+# 添加列 info，用于后续合并
+df_obs["info"] = df_obs["source_flag"] + df_obs["energy_domain"]
+
+# xray是xray
+agg_obs = df_obs.groupby("SNR_id").agg(
+    Xray=("Xray", lambda x: "|".join(x)),
+    gamma_TeV=("gamma_TeV", lambda x: "|".join(x)),
+    gamma_GeV=("gamma_GeV", lambda x: "|".join(x)),
+    source_flag=("source_flag", lambda x: "|".join(x)),
+    info=("info", lambda x: "|".join(x)),
+).reset_index()
+
+
 
 # ========== Step 5: 将波段信息合并到 df_merged ==========
 df_final = df_merged.merge(agg_obs, left_on="normalized_name", right_on="SNR_id", how="left")
