@@ -352,9 +352,10 @@ def plot_dist(file_factor2,spec_fig):
 
 
     ax.set_box_aspect(1)
-    plt.show()
-    plt.savefig(spec_fig, bbox_inches='tight',format="pdf")
+    plt.savefig(spec_fig, bbox_inches='tight',format="png",dpi=300)
     print(f"Saved {spec_fig}")
+    plt.show()
+
     plt.close('all')
     
 
