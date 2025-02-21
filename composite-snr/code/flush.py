@@ -5,10 +5,13 @@ import pandas as pd
 file_snr = "../cat/SNRcat20250115-SNR.csv"
 file_green = "../cat/greencat.csv"
 file_obs = "../cat/SNRcat20250115-OBS.csv"
+file_pulsar = "../cat/pulsar-snr.csv"
 
 df_snr = pd.read_csv(file_snr, sep=";", comment="#", header=1)
 df_green = pd.read_csv(file_green)
-
+df_pulsar = pd.read_csv(file_pulsar)
+# 只选择部分列
+df_pulsar_filter = df_pulsar[["normalized_name","pulsar-CCO","uncertain-pulsar"]]
 # ========== Step 2: 规范化 Green 目录中的 G 名称 ==========
 def normalize_g_name(g_name):
     """ 规范化 G 名称（填充数字到固定长度）"""
@@ -26,7 +29,8 @@ df_green["source_from"] = "green"
 df_snr["normalized_name"] = df_snr["G"]  # 直接使用 G 作为标准化名称
 
 df_merged = pd.merge(df_snr, df_green, on="normalized_name", how="outer")
-print(df_merged.columns)
+df_merged = pd.merge(df_merged, df_pulsar, on="normalized_name", how="outer")
+# print(df_merged.columns)
 
 
 # 筛选表格，保留列Type_X含composite的或Type_Y含C的
@@ -74,7 +78,7 @@ df_obs["gamma_TeV"] = df_obs.apply(lambda row: row["source_flag"] if row["gamma_
 # 如果gamma_GeV为true, 则将source_flag信息写入gamma_GeV列
 df_obs["gamma_GeV"] = df_obs.apply(lambda row: row["source_flag"] if row["gamma_GeV"] else "", axis=1)
 
-print(df_obs["Xray"])
+# print(df_obs["Xray"])
 
 
 
@@ -102,9 +106,16 @@ for col in ["Xray", "gamma_TeV", "gamma_GeV"]:
 # 默认所有源都有 radio 观测
 df_final["radio"] = "yes"
 
+print(df_final.columns)
+# 只保留需要的列数
+# df_final = df_final[["normalized_name","l","b",'RA','DEC','size_radio','size_X''gamma_TeV','gamma_GeV']]
+
+# print(df_final['pulsar-CCO'])
 # ========== Step 7: 保存最终合并结果 ==========
 output_file_path = "../cat/three-cat.csv"
 df_final.to_csv(output_file_path, index=False)
 
 print(f"合并完成，新文件已保存为 {output_file_path}")
+# %%
+df_final['pulsar-CCO']
 # %%
