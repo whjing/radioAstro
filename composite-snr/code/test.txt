@@ -1,0 +1,70 @@
+2025-02-24 18:04:21|INFO    | loadSkyview.py:41 | Input coordinates in Galactic (deg) are nan, nan
+2025-02-24 18:04:21|INFO    | loadSkyview.py:63 | Retry attempt 1/5
+2025-02-24 18:04:21|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS HB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS HB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS FB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS FB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS SB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS SB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GB6 (4850MHz). Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GB6 (4850MHz): Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from SUMSS 843 MHz. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for SUMSS 843 MHz: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from NVSS. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for NVSS: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:63 | Retry attempt 2/5
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS HB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS HB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS FB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS FB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS SB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS SB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GB6 (4850MHz). Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GB6 (4850MHz): Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from SUMSS 843 MHz. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for SUMSS 843 MHz: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from NVSS. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for NVSS: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:63 | Retry attempt 3/5
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS HB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS HB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS FB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS FB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS SB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS SB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GB6 (4850MHz). Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GB6 (4850MHz): Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from SUMSS 843 MHz. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for SUMSS 843 MHz: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from NVSS. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for NVSS: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:63 | Retry attempt 4/5
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS HB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS HB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS FB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS FB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS SB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS SB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GB6 (4850MHz). Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GB6 (4850MHz): Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from SUMSS 843 MHz. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for SUMSS 843 MHz: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from NVSS. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for NVSS: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:63 | Retry attempt 5/5
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS HB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS HB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS FB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS FB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS SB. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GOODS: Chandra ACIS SB: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GB6 (4850MHz). Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for GB6 (4850MHz): Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from SUMSS 843 MHz. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for SUMSS 843 MHz: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from NVSS. Center: nan, nan; radius: 0.011666666666666665 deg
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:76 | Error occurred for NVSS: Unable to find coordinates for name 'nan, nan' using http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/A?nan%2C%20nan
+2025-02-24 18:04:26|ERROR   | loadSkyview.py:97 | Failed to download data for the following surveys after 5 retries: ['GOODS: Chandra ACIS HB', 'GOODS: Chandra ACIS FB', 'GOODS: Chandra ACIS SB', 'GB6 (4850MHz)', 'SUMSS 843 MHz', 'NVSS']
+2025-02-24 18:04:26|INFO    | loadSkyview.py:41 | Input coordinates in Galactic (deg) are 0.9, 0.1
+2025-02-24 18:04:26|INFO    | loadSkyview.py:63 | Retry attempt 1/5
+2025-02-24 18:04:26|INFO    | loadSkyview.py:68 | Downloading FITS file from GOODS: Chandra ACIS HB. Center: 0.9, 0.1; radius: 0.13333333333333333 deg
